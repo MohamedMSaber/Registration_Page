@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Assignment 6 Bootstrab</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container p-5">
+
+        <div class="container w-75 form-container my-5 text-center p-5">
+            <h1 class="text-info">Smart Login System</h1>
+
+            <div class="my-3">
+                <input type="text" class="form-control bg-transparent text-white" id="loginEmail" placeholder="Enter your Email">
+            </div>
+            <div class="my-3">
+                <input type="password" class="form-control bg-transparent text-white mb-5" id="loginPassword" placeholder="Enter your password">
+            </div>
+
+
+
+            <p class="text-danger d-none" id="fillMsg">fill the inputs first</p>
+            <p class="text-danger d-none" id="wrongMsg">your email or password is incorrect</p>
+            <a class="btn btn-outline-info w-100 mb-3 text-decoration-none" id="loginBtn" onclick="login()">Login</a>
+            <p class="text-white">don't have an accoount? <a href="signUp.html" class="text-white ">Sign Up</a></p>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
