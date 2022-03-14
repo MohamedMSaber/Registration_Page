@@ -9,6 +9,7 @@ let loginBtn = document.getElementById("loginBtn");
 let welcomeUsername = document.getElementById("welcomeUsername")
 let userInfo;
 let username = localStorage.getItem("sessionUserName");
+let signUpButton = document.getElementById("signUpButton");
 
 if (localStorage.getItem("users") == null) {
     userInfo = [];
@@ -21,12 +22,7 @@ function signUp() {
 
     userInputsValidation();
     isExist();
-    console.log(userPasswordValidation());
-    console.log(userNameValidation());
-    console.log(userEmailValidation());
-    console.log(userInputsValidation());
 
-    console.log(isExist())
     if (userInputsValidation() == true && isExist() == false) {
         let user =
         {
@@ -36,6 +32,7 @@ function signUp() {
         };
         userInfo.push(user);
         localStorage.setItem("users", JSON.stringify(userInfo));
+        signUpButton.setAttribute("href","index.html");
 
     }
     else {
