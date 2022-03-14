@@ -10,6 +10,7 @@ let welcomeUsername = document.getElementById("welcomeUsername")
 let userInfo;
 let username = localStorage.getItem("sessionUserName");
 let signUpButton = document.getElementById("signUpButton");
+let accountExistMsg = document.getElementById("checkExist");
 
 if (localStorage.getItem("users") == null) {
     userInfo = [];
@@ -84,6 +85,7 @@ function userEmailValidation() {
         userEmailInput.classList.add("is-valid");
         userEmailInput.classList.remove("is-invalid");
         emailAlert.classList.replace("d-block", "d-none");
+        accountExistMsg.classList.replace("d-block", "d-none");
         return true;
     }
     else {
@@ -108,7 +110,6 @@ function userInputsValidation() {
 }
 
 function isExist() {
-    let accountExistMsg = document.getElementById("checkExist");
 
     for (var i = 0; i < userInfo.length; i++) {
 
